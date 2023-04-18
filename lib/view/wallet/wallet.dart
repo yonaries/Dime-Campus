@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../../core/common/transaction_card.dart';
 import 'widgets/circle_icon_button.dart';
 import 'widgets/small_plan_card.dart';
 
@@ -29,7 +30,7 @@ class _WalletScreenState extends State<WalletScreen> {
           statusBarIconBrightness: Brightness.light,
         ),
       ),
-      body: SingleChildScrollView(
+      body: SizedBox(
         child: Column(
           children: [
             // upper container
@@ -112,6 +113,71 @@ class _WalletScreenState extends State<WalletScreen> {
             ),
 
             // plans container
+            Column(
+              children: [
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  child: SizedBox(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(height: 20),
+                        Row(
+                          children: [
+                            const Text(
+                              'My Plans',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const Spacer(),
+                            Row(
+                              children: const [
+                                Text(
+                                  'View all',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                                SizedBox(width: 5),
+                                Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: Colors.white,
+                                  size: 16,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 10),
+                        SizedBox(
+                          height: 100,
+                          child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: 5,
+                            itemBuilder: (context, index) {
+                              return SmallPlanCard(
+                                colorScheme: colorScheme,
+                                budget: 200,
+                                category: 'savings',
+                                current: 75,
+                                title: 'Plan 1',
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            // transactions container
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: SizedBox(
@@ -122,7 +188,7 @@ class _WalletScreenState extends State<WalletScreen> {
                     Row(
                       children: [
                         const Text(
-                          'My Plans',
+                          'Recent Transactions',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
@@ -152,16 +218,17 @@ class _WalletScreenState extends State<WalletScreen> {
                     const SizedBox(height: 10),
                     SizedBox(
                       height: 100,
+
+                      //TODO: make the list scrollable till to the top of lower container
                       child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
+                        scrollDirection: Axis.vertical,
                         itemCount: 5,
                         itemBuilder: (context, index) {
-                          return SmallPlanCard(
-                            colorScheme: colorScheme,
-                            budget: 100,
-                            category: 'savings',
-                            current: 75,
-                            title: 'Plan 1',
+                          return const TransactionCard(
+                            transaction: TransactionType.received,
+                            amount: 100,
+                            message: 'Sent to John Doe',
+                            date: 'Today, 12:00 PM',
                           );
                         },
                       ),
@@ -169,7 +236,7 @@ class _WalletScreenState extends State<WalletScreen> {
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

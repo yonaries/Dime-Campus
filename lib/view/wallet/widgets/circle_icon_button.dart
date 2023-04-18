@@ -9,7 +9,7 @@ class CircleIconButton extends StatelessWidget {
   const CircleIconButton(
       {super.key,
       required this.onPressed,
-      required this.text,
+      this.text = "",
       required this.icon,
       required this.color});
 
@@ -35,13 +35,14 @@ class CircleIconButton extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10),
-          Text(
-            text,
-            style: TextStyle(
-              color: colorScheme.onBackground,
-              fontSize: 16,
+          if (text != "")
+            Text(
+              text,
+              style: TextStyle(
+                color: colorScheme.onSurface,
+                fontSize: 12,
+              ),
             ),
-          ),
         ],
       ),
     );
