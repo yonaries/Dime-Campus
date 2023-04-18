@@ -24,7 +24,7 @@ class SmallPlanCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 10),
       child: Container(
-        width: 200,
+        width: 210,
         padding: const EdgeInsets.symmetric(horizontal: 20),
         decoration: BoxDecoration(
           color: colorScheme.surface,
@@ -65,6 +65,7 @@ class SmallPlanCard extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
+              alignment: MainAxisAlignment.spaceBetween,
               trailing: Text(
                 budget.toString(),
                 style: TextStyle(color: colorScheme.onSurface),

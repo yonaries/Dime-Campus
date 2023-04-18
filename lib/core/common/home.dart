@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../view/activity/activity.dart';
 import '../../view/wallet/wallet.dart';
 
 class Home extends StatefulWidget {
@@ -13,7 +14,7 @@ class _HomeState extends State<Home> {
   //TODO: Replace with actual screens
   final List<Widget> screens = [
     const WalletScreen(),
-    const Center(child: Text('Activity')),
+    const ActivityScreen(),
     const Center(child: Text('Plan')),
     const Center(child: Text('More')),
   ];
