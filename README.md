@@ -1,4 +1,4 @@
-# Nuvio - Take control of your campus life
+# Dime app - Take control of your campus life
 
 Financial service designed to help students save more money, reduce stress, and stay on top of their finances while studying on campus.
 
