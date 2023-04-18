@@ -8,6 +8,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  //TODO: Replace with actual screens
   final List<Widget> screens = [
     const Center(child: Text('Wallet')),
     const Center(child: Text('Activity')),
