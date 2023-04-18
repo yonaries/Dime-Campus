@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nuvio/view/Qr/qr.dart';
 
 import 'core/common/home.dart';
 
@@ -20,7 +21,12 @@ class MyApp extends StatelessWidget {
             secondary: Color.fromRGBO(255, 224, 130, 1),
             error: Colors.redAccent),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: '/home',
+      routes: {
+        '/home': (context) => const MyHomePage(title: 'Dime App'),
+        '/scan': (context) => const QrView()
+      },
     );
   }
 }

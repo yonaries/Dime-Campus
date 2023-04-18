@@ -1,0 +1,392 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "0.0.1",
+        "title": "Agent47",
+        "description": "Backend api documentation for bank hackthon app"
+    },
+    "paths": {
+        
+        "/account/create": {
+            "post": {
+                "summary": "Account setup",
+                "description": "Register an account on the server by sending publicKey to the server, the server knows who is who.",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "publicKey": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "publicKey"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "returns address after hashing and storing public key",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type":"object",
+                                    "properties": {
+                                        "address": {
+                                            "type":"string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/wallet/info/:address": {
+            "get": {
+                "summary": "Get wallet info",
+                "description": "Get wallet info for a given public address",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "address",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "amount remaining and transactions info",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type":"object",
+                                    "properties": {
+                                        "amount":{
+                                            "type": "number"
+                                        },
+                                        "transactions":{
+                                            "type":"array",
+                                            "items":{
+                                                "$ref": "#/components/schemas/Transaction"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/wallet/buy": {
+            "get": {
+                "summary": "Buy some credit",
+                "description": "redirects to chapa",
+                "responses": {
+                    "200":{
+                        "description": "redirects to chapa"
+                    }
+                }
+            }
+        },
+        "/wallet/send": {
+            "post": {
+                "summary": "Send funds",
+                "description": "Does checks and moves funds around",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Transaction"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "returns true on success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SuccessResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/wallet/loan": {
+            "post": {
+                "summary": "Apply for loan",
+                "description": "Apply for loan to spend money under limit",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type":"object",
+                                "properties": {
+                                    "name":{
+                                        "type": "string"
+                                    },
+                                    "kebeleId":{
+                                        "type": "string"
+                                    },
+                                    "uniID":{
+                                        "type": "string"
+                                    },
+                                    "uniPhoto":{
+                                        "type": "object",
+                                        "properties": {
+                                            "front":{
+                                                "type": "string",
+                                                "description": "base64"
+                                            },
+                                            "back":{
+                                                "type": "string",
+                                                "description": "base64"
+                                            }
+                                        }
+                                    },
+                                    "photo": {
+                                        "type": "string",
+                                        "description": "base64"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "returns true on success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SuccessResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/activity/:address/:days": {
+            "get": {
+                "summary": "Get activity",
+                "description": "activity for n days",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "address",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "days",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "transactions and predictions data",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type":"object",
+                                    "properties": {
+                                        "transactions":{
+                                            "type":"array",
+                                            "items":{
+                                                "$ref": "#/components/schemas/Transaction"
+                                            }
+                                        },
+                                        "predictions":{
+                                            "type":"array",
+                                            "items":{
+                                                "$ref": "#/components/schemas/Prediction"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/vote": {
+            "post": {
+                "summary": "Cast vote",
+                "description": "Vote into the reserve management",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "publicKey":{
+                                        "type": "string"
+                                    },
+                                    "signature":{
+                                        "type": "string"
+                                    },
+                                    "value":{
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "returns true on success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SuccessResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/download-data/:address": {
+            "get": {
+                "summary": "Download user data",
+                "description": "Download keys and transactions data",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "address",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Responds with a file to download"
+                    }
+                }
+            }
+        },
+        "/webhook": {
+            "post": {
+                "summary": "Set a webhook",
+                "description": "Set a webhook the server will send updates to",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "url":{
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "returns true on success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SuccessResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "SuccessResponse": {
+                "type": "object",
+                "required": [
+                    "success"
+                ],
+                "properties": {
+                    "success": {
+                        "type": "boolean"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Transaction": {
+                "type": "object",
+                "required": [
+                    "publicAddress",
+                    "publicKey",
+                    "receiverAddress",
+                    "amount",
+                    "signature"
+                ],
+                "properties": {
+                    "publicAddress": {
+                        "type": "string"
+                    },
+                    "publicKey": {
+                        "type": "string"
+                    },
+                    "receiverAddress": {
+                        "type": "string"
+                    },
+                    "amount": {
+                        "type": "number"
+                    },
+                    "signature": {
+                        "type": "string"
+                    },
+                    "date":{
+                        "type": "string"
+                    }
+                }
+            },
+            "Prediction": {
+                "type": "object",
+                "required": [
+                    "amount",
+                    "data"
+                ],
+                "properties": {
+                    "amount": {
+                        "type": "string"
+                    },
+                    "date": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
