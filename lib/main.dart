@@ -21,6 +21,8 @@ class MyApp extends StatelessWidget {
           error: Colors.redAccent,
           background: Color(0xFF0b0d0f),
           surface: Color(0xFF101213),
+          onSurface: Color(0xFFccd2e3),
+          onBackground: Color(0xFF6a6a6a),
         ),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
