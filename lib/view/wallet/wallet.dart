@@ -227,7 +227,7 @@ class _WalletScreenState extends State<WalletScreen> {
                           return const TransactionCard(
                             transaction: TransactionType.received,
                             amount: 100,
-                            message: 'Sent to John Doe',
+                            message: 'Receive to John Doe',
                             date: 'Today, 12:00 PM',
                           );
                         },
