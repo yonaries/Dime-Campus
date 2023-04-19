@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:path/path.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,13 +10,13 @@ class InputImage extends StatefulWidget {
     super.key,
     required this.image,
     required this.label,
-    this.hint = '',
+    this.hint = 'Selfie time',
     this.keyboard = TextInputType.text,
   });
 
   File? image;
   final String label;
-  final String hint;
+  String hint;
   final TextInputType keyboard;
 
   @override
@@ -31,6 +32,7 @@ class _InputImageState extends State<InputImage> {
       final imageTemp = File(image.path);
       setState(() {
         widget.image = imageTemp;
+        widget.hint = 'Photo Uploaded, You look great!';
       });
     } on PlatformException catch (e) {
       print('Failed to pick image: $e');

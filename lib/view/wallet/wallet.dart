@@ -186,6 +186,7 @@ class _WalletScreenState extends State<WalletScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: SizedBox(
+                height: height * 0.48,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -226,9 +227,7 @@ class _WalletScreenState extends State<WalletScreen> {
                       ],
                     ),
                     const SizedBox(height: 10),
-                    SizedBox(
-                      height: 100,
-
+                    Expanded(
                       //TODO: make the list scrollable till to the top of lower container
                       child: ListView.builder(
                         scrollDirection: Axis.vertical,

@@ -27,7 +27,7 @@ class _LoanFormScreenState extends State<LoanFormScreen> {
     File? _image;
 
     return Scaffold(
-      appBar: DimeAppBar('Edit Plan', context),
+      appBar: DimeAppBar('Loan Register', context),
       backgroundColor: colorScheme.background,
       body: SingleChildScrollView(
         child: Column(
@@ -35,7 +35,7 @@ class _LoanFormScreenState extends State<LoanFormScreen> {
             InputBox(
               controller: _plan,
               label: 'Full Name',
-              hint: 'eg. Food & Drink',
+              hint: 'eg. Yonathan Dejene',
             ),
             InputBox(
               controller: _budget,
@@ -46,7 +46,6 @@ class _LoanFormScreenState extends State<LoanFormScreen> {
             InputImage(
               image: _image,
               label: 'Photo',
-              hint: 'Selfie time',
             ),
             InputBox(
               controller: _category,
