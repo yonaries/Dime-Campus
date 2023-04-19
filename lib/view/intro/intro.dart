@@ -102,37 +102,40 @@ class _IntroViewState extends State<IntroView> {
     return DefaultTabController(
         length: 3,
         child: SafeArea(
-          child: Scaffold(
-            backgroundColor: const Color(0xFF101213),
-            body: Column(
-              children: [
-                Expanded(
-                    flex: 10,
-                    child: TabBarView(children: [
-                      _IntroPage(
-                          "New Approach to your Finance",
-                          "Now all your finances are in one place and under your control",
-                          "Next",
-                          'assets/images/intro_1.jpg', () {
-                        DefaultTabController.of(context).animateTo(2);
-                      }),
-                      _IntroPage(
-                          "Quick Analysis of All Expenses",
-                          "All expenses by cards are reflected automatically in the application and analytics system helps to control them",
-                          "Next",
-                          'assets/images/intro_2.jpg',
-                          () => DefaultTabController.of(context).animateTo(3)),
-                      _IntroPage(
-                          "Plan Out your spending",
-                          "Now all your finances are in one place and under your control",
-                          "Next",
-                          'assets/images/intro_3.jpg',
-                          () {})
-                    ])),
-                Expanded(flex: 2, child: TabPageSelector(color: Colors.white))
-              ],
-            ),
-          ),
+          child: Builder(builder: (context) {
+            return Scaffold(
+              backgroundColor: const Color(0xFF101213),
+              body: Column(
+                children: [
+                  Expanded(
+                      flex: 10,
+                      child: TabBarView(children: [
+                        _IntroPage(
+                            "New Approach to your Finance",
+                            "Now all your finances are in one place and under your control",
+                            "Next",
+                            'assets/images/intro_1.jpg', () {
+                          DefaultTabController.of(context).animateTo(2);
+                        }),
+                        _IntroPage(
+                            "Quick Analysis of All Expenses",
+                            "All expenses by cards are reflected automatically in the application and analytics system helps to control them",
+                            "Next",
+                            'assets/images/intro_2.jpg',
+                            () =>
+                                DefaultTabController.of(context).animateTo(3)),
+                        _IntroPage(
+                            "Plan Out your spending",
+                            "Now all your finances are in one place and under your control",
+                            "Next",
+                            'assets/images/intro_3.jpg',
+                            () {})
+                      ])),
+                  Expanded(flex: 2, child: TabPageSelector(color: Colors.white))
+                ],
+              ),
+            );
+          }),
         ));
   }
 }

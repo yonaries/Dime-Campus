@@ -116,6 +116,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "qr",
+      "rootUri": "file:///C:/Users/natan/AppData/Local/Pub/Cache/hosted/pub.dev/qr-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "qr_flutter",
+      "rootUri": "file:///C:/Users/natan/AppData/Local/Pub/Cache/hosted/pub.dev/qr_flutter-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///C:/FLUTTER/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -170,7 +182,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-04-18T22:45:26.165154Z",
+  "generated": "2023-04-19T08:59:54.281790Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }
