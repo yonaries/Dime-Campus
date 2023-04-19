@@ -27,6 +27,7 @@ class __BottomSheetState extends State<_BottomSheet> {
     final _inputTextStyle =
         TextStyle(color: Theme.of(context).colorScheme.onBackground);
     final size = MediaQuery.of(context).size;
+    //TODO keyboard covers the textfield
     final _items = ['Food', "Other", "Dates :)"]
         .map((data) => DropdownMenuItem(
               value: data,
@@ -37,8 +38,9 @@ class __BottomSheetState extends State<_BottomSheet> {
             ))
         .toList();
     return Container(
-      decoration:
-          BoxDecoration(color: Theme.of(context).colorScheme.background),
+      decoration: BoxDecoration(
+          color: Theme.of(context).colorScheme.background,
+          borderRadius: BorderRadius.all(Radius.circular(10))),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,

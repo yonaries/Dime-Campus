@@ -7,6 +7,7 @@ import 'package:nuvio/view/qr/my_qr.dart';
 import 'package:nuvio/view/plans/plans.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nuvio/view/rec/rec.dart';
 import 'package:nuvio/view/send/send.dart';
 
 import 'core/common/home.dart';
@@ -40,10 +41,12 @@ class MyApp extends StatelessWidget {
         ),
 
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-        initialRoute: '/send', //white surface background onBackground
+        initialRoute: '/rec', //white surface background onBackground
         onGenerateRoute: (settings) {
           final args = settings.arguments;
           switch (settings.name) {
+            case '/rec':
+              return MaterialPageRoute(builder: (context) => RecieveView());
             case '/':
             case '/home':
               return MaterialPageRoute(
