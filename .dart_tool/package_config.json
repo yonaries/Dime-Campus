@@ -92,6 +92,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "hive",
+      "rootUri": "file:///C:/Users/natan/AppData/Local/Pub/Cache/hosted/pub.dev/hive-2.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "http",
       "rootUri": "file:///C:/Users/natan/AppData/Local/Pub/Cache/hosted/pub.dev/http-0.13.5",
       "packageUri": "lib/",
@@ -314,7 +320,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-04-19T20:06:20.897349Z",
+  "generated": "2023-04-19T21:20:22.507851Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }

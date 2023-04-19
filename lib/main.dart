@@ -18,12 +18,22 @@ import 'package:nuvio/view/withdrawal/with.dart';
 import 'core/common/home.dart';
 import 'core/common/keypad.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'package:hive/hive.dart';
+import 'package:path_provider/path_provider.dart';
+
+import 'dart:io';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  var dbPath = (await getApplicationDocumentsDirectory()).path;
+  Hive.init(dbPath);
+  await Hive.openBox('main');
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+  final _box = Hive.box('main');
 
   // This widget is the root of your application.
   @override
@@ -46,13 +56,15 @@ class MyApp extends StatelessWidget {
         ),
 
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-        initialRoute: '/enter_pass', //white surface background onBackground
+        initialRoute:
+            _box.containsKey('password') ? '/enter_pass' : '/change_pass',
+
+        //white surface background onBackground
         onGenerateRoute: (settings) {
           final args = settings.arguments;
           switch (settings.name) {
             case '/enter_pass':
-              return MaterialPageRoute(
-                  builder: (context) => EnterPasscode("1234"));
+              return MaterialPageRoute(builder: (context) => EnterPasscode());
             case '/change_pass':
               return MaterialPageRoute(builder: (context) => ChangePasscode());
             case '/withdraw':

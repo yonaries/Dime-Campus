@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:hive/hive.dart';
 import 'package:nuvio/core/common/keypad.dart';
 
 class ChangePasscode extends StatefulWidget {
@@ -25,10 +26,12 @@ class _ChangePasscodeState extends State<ChangePasscode> {
     _cnt.addListener(() {
       setState(() {
         _pass = _cnt.text;
+        _box.put('password', _pass);
       });
     });
   }
 
+  final _box = Hive.box('main');
   @override
   Widget build(BuildContext context) {
     final String pass = !_show ? ('*' * _pass.length) : _pass;

@@ -1,25 +1,25 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:nuvio/core/common/keypad.dart';
 
 class EnterPasscode extends StatefulWidget {
-  EnterPasscode(this._pass, {super.key});
+  EnterPasscode({super.key});
   final TextEditingController _cnt = TextEditingController();
-  final String _pass;
 
   @override
-  State<EnterPasscode> createState() =>
-      _EnterPasscodeState(_cnt, KeyPad(_cnt), _pass);
+  State<EnterPasscode> createState() => _EnterPasscodeState(_cnt, KeyPad(_cnt));
 }
 
 class _EnterPasscodeState extends State<EnterPasscode> {
-  _EnterPasscodeState(this._cnt, this._keyPad, this._passNeeded);
+  _EnterPasscodeState(this._cnt, this._keyPad);
   bool _show = false;
   String _pass = "";
   final KeyPad _keyPad;
   final TextEditingController _cnt;
-  final String _passNeeded;
+
   static const _textStyle = TextStyle(fontSize: 30, color: Colors.white);
+  final _box = Hive.box('main');
   @override
   void initState() {
     super.initState();
@@ -32,6 +32,10 @@ class _EnterPasscodeState extends State<EnterPasscode> {
 
   @override
   Widget build(BuildContext context) {
+    final String? _passNeeded = _box.get('password');
+    // if (_passNeeded == null) {
+    //   Navigator.of(context).pushReplacementNamed('/intro');
+    // }
     if (_pass == _passNeeded) {
       debugPrintThrottled("Got password");
     }
