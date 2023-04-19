@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class _IntroPage extends StatelessWidget {
@@ -67,12 +68,16 @@ class _IntroPage extends StatelessWidget {
                 ))
           ],
         ),
-        Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-          Image.asset(
-            _img,
-            height: mq.size.height * 0.3,
-          ),
-        ]),
+        Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Image.asset(
+                _img,
+                height: mq.size.height * 0.23,
+                width: mq.size.width * 0.6,
+              ),
+            ]),
         const Flexible(
             child: FractionallySizedBox(
           heightFactor: 0.6,
@@ -115,7 +120,7 @@ class _IntroViewState extends State<IntroView> {
                             "Now all your finances are in one place and under your control",
                             "Next",
                             'assets/images/intro_1.jpg', () {
-                          DefaultTabController.of(context).animateTo(2);
+                          DefaultTabController.of(context).animateTo(1);
                         }),
                         _IntroPage(
                             "Quick Analysis of All Expenses",
@@ -123,13 +128,15 @@ class _IntroViewState extends State<IntroView> {
                             "Next",
                             'assets/images/intro_2.jpg',
                             () =>
-                                DefaultTabController.of(context).animateTo(3)),
+                                DefaultTabController.of(context).animateTo(2)),
                         _IntroPage(
                             "Plan Out your spending",
                             "Now all your finances are in one place and under your control",
                             "Next",
-                            'assets/images/intro_3.jpg',
-                            () {})
+                            'assets/images/intro_3.jpg', () {
+                          debugPrintThrottled('going intro_f');
+                          Navigator.of(context).pushNamed('/intro_f');
+                        })
                       ])),
                   Expanded(flex: 2, child: TabPageSelector(color: Colors.white))
                 ],

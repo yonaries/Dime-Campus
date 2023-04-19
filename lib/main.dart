@@ -4,6 +4,7 @@ import 'package:nuvio/core/common/QrWidget.dart';
 import 'package:nuvio/view/Qr/qr.dart';
 import 'package:nuvio/view/deposit/deposit.dart';
 import 'package:nuvio/view/intro/intro.dart';
+import 'package:nuvio/view/intro/intro_final.dart';
 import 'package:nuvio/view/qr/my_qr.dart';
 import 'package:nuvio/view/plans/plans.dart';
 
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
         ),
 
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-        initialRoute: '/withdraw', //white surface background onBackground
+        initialRoute: '/intro', //white surface background onBackground
         onGenerateRoute: (settings) {
           final args = settings.arguments;
           switch (settings.name) {
@@ -66,6 +67,9 @@ class MyApp extends StatelessWidget {
                   builder: (context) => const PlansScreen());
             case '/intro':
               return MaterialPageRoute(builder: (context) => const IntroView());
+            case '/intro_f':
+              return MaterialPageRoute(
+                  builder: (context) => const IntroFinal());
             case '/test':
               return MaterialPageRoute(builder: (context) => TestKeyPad());
             case '/my_qr':

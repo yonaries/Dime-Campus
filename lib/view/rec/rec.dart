@@ -70,7 +70,7 @@ class _RecieveViewState extends State<RecieveView> {
                     backgroundColor: Theme.of(context).colorScheme.secondary,
                     minimumSize: Size(size.width * 0.9, 50)),
                 child: const Text(
-                  "Send Credit",
+                  "Receive Credit",
                   style: TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold),
                 ),
