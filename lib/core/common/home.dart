@@ -36,7 +36,9 @@ class _HomeState extends State<Home> {
           child: _selectedScreen,
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed('/scan');
+          },
           tooltip: 'Scan',
           backgroundColor: Theme.of(context).colorScheme.primary,
           child: const Icon(Icons.qr_code_scanner),
