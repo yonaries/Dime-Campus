@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../../core/common/appbar.dart';
+import '../../core/common/button.dart';
+import '../../core/common/transaction_list.dart';
+import 'widgets/plan_card.dart';
+import 'widgets/plan_header.dart';
+
 class PlanDetailScreen extends StatelessWidget {
   const PlanDetailScreen({super.key});
 
@@ -10,38 +16,41 @@ class PlanDetailScreen extends StatelessWidget {
     final ColorScheme colorScheme = theme.colorScheme;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Plans'),
-        backgroundColor: colorScheme.surface,
-        elevation: 0,
-        centerTitle: true,
-        titleTextStyle: const TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.w600,
-        ),
-        systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarColor: colorScheme.surface,
-          statusBarIconBrightness: Brightness.light,
-        ),
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Container(
-            width: 30,
-            height: 30,
-            decoration: BoxDecoration(
-              color: colorScheme.onSurface,
-              borderRadius: BorderRadius.circular(50),
-            ),
-            child: const Icon(
-              Icons.arrow_back_ios_rounded,
-              color: Colors.white,
-            ),
-          ),
-        ),
+      appBar: DimeAppBar(
+        'Plan Details',
+        context,
       ),
       backgroundColor: colorScheme.background,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const PlanHeader(
+              title: 'Plan Title',
+              category: 'Category',
+              date: 'September 20, 2021',
+            ),
+            const PlanCard(
+              title: '300 credits',
+              category: 'Budget',
+              current: 100,
+              budget: 200,
+            ),
+            const SizedBox(height: 10),
+            DimeButton(
+              onTap: () {},
+              text: "Deposit",
+              color: colorScheme.primary,
+            ),
+            DimeButton(
+              onTap: () {},
+              text: "Withdraw",
+              color: colorScheme.secondary,
+            ),
+            const SizedBox(height: 10),
+            const TransactionList()
+          ],
+        ),
+      ),
     );
   }
 }

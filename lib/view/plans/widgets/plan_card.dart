@@ -30,7 +30,7 @@ class PlanCard extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsets.symmetric(
-        horizontal: 20,
+        horizontal: 10,
         vertical: 10,
       ),
       child: GestureDetector(
@@ -59,6 +59,7 @@ class PlanCard extends StatelessWidget {
                       fontSize: 14,
                     ),
                   ),
+                  const SizedBox(height: 5),
                   Text(
                     title,
                     style: const TextStyle(
