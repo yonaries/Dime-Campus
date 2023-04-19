@@ -32,7 +32,7 @@ class __BottomSheetState extends State<_BottomSheet> {
               value: data,
               child: Text(
                 data,
-                style: _textStyle.copyWith(fontSize: 8),
+                style: _textStyle.copyWith(fontSize: 8, color: Colors.black),
               ),
             ))
         .toList();
@@ -132,6 +132,7 @@ class _SendState extends State<Send> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+        resizeToAvoidBottomInset: true,
         backgroundColor: Theme.of(context).colorScheme.background,
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.background,
