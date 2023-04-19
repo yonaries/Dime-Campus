@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nuvio/view/plans/edit_plan.dart';
 
 import 'core/common/home.dart';
+import 'view/loan/loan_form.dart';
 import 'view/plans/plan_detail.dart';
 
 void main() {
@@ -35,7 +36,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home': (context) => const MyHomePage(title: 'Dime App'),
         '/plan_details': (context) => const PlanDetailScreen(),
-        '/create_plan': (context) => const EditPlanScreen()
+        '/create_plan': (context) => const EditPlanScreen(),
+        '/loan_form': (context) => const LoanFormScreen(),
       },
     );
   }
