@@ -31,10 +31,7 @@ class _HomeState extends State<Home> {
     final ColorScheme colorScheme = theme.colorScheme;
 
     return Scaffold(
-        body: PageStorage(
-          bucket: bucket,
-          child: _selectedScreen,
-        ),
+        body: screens[_selectedIndex],
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           tooltip: 'Scan',
