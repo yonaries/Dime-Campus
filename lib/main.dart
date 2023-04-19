@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:nuvio/core/common/QrWidget.dart';
 import 'package:nuvio/view/Qr/qr.dart';
+import 'package:nuvio/view/deposit/deposit.dart';
 import 'package:nuvio/view/intro/intro.dart';
 import 'package:nuvio/view/qr/my_qr.dart';
 import 'package:nuvio/view/plans/plans.dart';
@@ -9,6 +10,7 @@ import 'package:nuvio/view/plans/plans.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nuvio/view/rec/rec.dart';
 import 'package:nuvio/view/send/send.dart';
+import 'package:nuvio/view/withdrawal/with.dart';
 
 import 'core/common/home.dart';
 import 'core/common/keypad.dart';
@@ -41,10 +43,14 @@ class MyApp extends StatelessWidget {
         ),
 
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-        initialRoute: '/rec', //white surface background onBackground
+        initialRoute: '/withdraw', //white surface background onBackground
         onGenerateRoute: (settings) {
           final args = settings.arguments;
           switch (settings.name) {
+            case '/withdraw':
+              return MaterialPageRoute(builder: (context) => WithdrawView());
+            case '/deposit':
+              return MaterialPageRoute(builder: (context) => DepositView());
             case '/rec':
               return MaterialPageRoute(builder: (context) => RecieveView());
             case '/':

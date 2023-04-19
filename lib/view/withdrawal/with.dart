@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 import '../../core/common/keypad.dart';
 
-class DepositView extends StatefulWidget {
-  DepositView({super.key});
+class WithdrawView extends StatefulWidget {
+  WithdrawView({super.key});
   TextEditingController _cnt = TextEditingController(text: "0");
   @override
-  State<DepositView> createState() => _DepositViewState(KeyPad(_cnt), _cnt);
+  State<WithdrawView> createState() => _WithdrawViewState(KeyPad(_cnt), _cnt);
 }
 
-class _DepositViewState extends State<DepositView> {
+class _WithdrawViewState extends State<WithdrawView> {
   static const _textStyle = TextStyle(fontSize: 30, color: Colors.white);
   final TextEditingController _cnt;
-  _DepositViewState(this._keypad, this._cnt);
+  _WithdrawViewState(this._keypad, this._cnt);
   String _ammt = "0";
   KeyPad _keypad;
 
@@ -35,7 +35,7 @@ class _DepositViewState extends State<DepositView> {
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.background,
           title: const Text(
-            "Deposit",
+            "Withdraw",
           ),
           centerTitle: true,
         ),
@@ -67,10 +67,10 @@ class _DepositViewState extends State<DepositView> {
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Theme.of(context).colorScheme.primary,
+                    backgroundColor: Theme.of(context).colorScheme.secondary,
                     minimumSize: Size(size.width * 0.9, 50)),
                 child: const Text(
-                  "Deposit",
+                  "Withdraw",
                   style: TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold),
                 ),
