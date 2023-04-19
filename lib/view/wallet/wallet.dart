@@ -30,7 +30,7 @@ class _WalletScreenState extends State<WalletScreen> {
           statusBarIconBrightness: Brightness.light,
         ),
       ),
-      body: SizedBox(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             // upper container
@@ -134,22 +134,27 @@ class _WalletScreenState extends State<WalletScreen> {
                               ),
                             ),
                             const Spacer(),
-                            Row(
-                              children: const [
-                                Text(
-                                  'View all',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16,
+                            GestureDetector(
+                              onTap: () {
+                                //TODO: navigate to plans screen by changing the index of the bottom navigation bar
+                              },
+                              child: Row(
+                                children: const [
+                                  Text(
+                                    'View all',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                    ),
                                   ),
-                                ),
-                                SizedBox(width: 5),
-                                Icon(
-                                  Icons.arrow_forward_ios,
-                                  color: Colors.white,
-                                  size: 16,
-                                ),
-                              ],
+                                  SizedBox(width: 5),
+                                  Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: Colors.white,
+                                    size: 16,
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         ),
@@ -196,22 +201,27 @@ class _WalletScreenState extends State<WalletScreen> {
                           ),
                         ),
                         const Spacer(),
-                        Row(
-                          children: const [
-                            Text(
-                              'View all',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
+                        GestureDetector(
+                          onTap: () {
+                            //TODO: navigate to activity screen by changing the index of the bottom navigation bar
+                          },
+                          child: Row(
+                            children: const [
+                              Text(
+                                'View all',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                ),
                               ),
-                            ),
-                            SizedBox(width: 5),
-                            Icon(
-                              Icons.arrow_forward_ios,
-                              color: Colors.white,
-                              size: 16,
-                            ),
-                          ],
+                              SizedBox(width: 5),
+                              Icon(
+                                Icons.arrow_forward_ios,
+                                color: Colors.white,
+                                size: 16,
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
