@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'core/common/home.dart';
+import 'view/plans/plan_detail.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +30,11 @@ class MyApp extends StatelessWidget {
           onBackground: Color(0xFF6a6a6a),
         ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: '/home',
+      routes: {
+        '/home': (context) => const MyHomePage(title: 'Dime App'),
+        '/plan_details': (context) => const PlanDetailScreen(),
+      },
     );
   }
 }
