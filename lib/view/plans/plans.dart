@@ -29,7 +29,7 @@ class PlansScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/loan_form');
+          Navigator.pushNamed(context, '/edit_plan');
         },
         tooltip: 'Create Plan',
         backgroundColor: Theme.of(context).colorScheme.secondary,

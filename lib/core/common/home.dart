@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../view/activity/activity.dart';
+import '../../view/more/more.dart';
 import '../../view/plans/plans.dart';
 import '../../view/wallet/wallet.dart';
 
@@ -17,7 +18,7 @@ class _HomeState extends State<Home> {
     const WalletScreen(),
     const ActivityScreen(),
     const PlansScreen(),
-    const Center(child: Text('More')),
+    const MoreScreen(),
   ];
 
   int _selectedIndex = 0;

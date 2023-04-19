@@ -1,3 +1,4 @@
+import 'dart:ffi';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -24,6 +25,7 @@ class _LoanFormScreenState extends State<LoanFormScreen> {
     final TextEditingController _budget = TextEditingController();
     final TextEditingController _until = TextEditingController();
     final TextEditingController _category = TextEditingController();
+    bool _isAgreed = true;
     File? _image;
 
     return Scaffold(
@@ -52,6 +54,42 @@ class _LoanFormScreenState extends State<LoanFormScreen> {
               label: 'Category',
               hint: 'eg. transport',
               keyboard: TextInputType.datetime,
+            ),
+            SizedBox(
+              child: Row(
+                children: [
+                  Checkbox(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5.0),
+                    ),
+                    activeColor: colorScheme.primary,
+                    side: MaterialStateBorderSide.resolveWith(
+                      (states) =>
+                          BorderSide(width: 1.0, color: colorScheme.primary),
+                    ),
+                    value: _isAgreed,
+                    onChanged: (value) {
+                      setState(() {
+                        _isAgreed = value!;
+                        print(value);
+                      });
+                    },
+                  ),
+                  Flexible(
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          _isAgreed = !_isAgreed;
+                        });
+                      },
+                      child: const Text(
+                        'By checking this box, I agree to all the terms and conditions.',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
             DimeButton(
               onTap: () {
