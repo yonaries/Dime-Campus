@@ -7,8 +7,10 @@ import 'package:nuvio/view/qr/my_qr.dart';
 import 'package:nuvio/view/plans/plans.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nuvio/view/send/send.dart';
 
 import 'core/common/home.dart';
+import 'core/common/keypad.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
         ),
 
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-        initialRoute: '/plans', //white surface background onBackground
+        initialRoute: '/send', //white surface background onBackground
         onGenerateRoute: (settings) {
           final args = settings.arguments;
           switch (settings.name) {
@@ -48,14 +50,15 @@ class MyApp extends StatelessWidget {
                   builder: (context) => const MyHomePage(title: 'Dime App'));
             case '/scan':
               return MaterialPageRoute(builder: (context) => const QrView());
+            case '/send':
+              return MaterialPageRoute(builder: (context) => Send());
             case '/plans':
               return MaterialPageRoute(
                   builder: (context) => const PlansScreen());
             case '/intro':
               return MaterialPageRoute(builder: (context) => const IntroView());
             case '/test':
-              return MaterialPageRoute(
-                  builder: (context) => QrWidget("dsdsdsd"));
+              return MaterialPageRoute(builder: (context) => TestKeyPad());
             case '/my_qr':
               return MaterialPageRoute(
                   builder: (context) =>
