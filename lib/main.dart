@@ -5,6 +5,8 @@ import 'package:nuvio/view/Qr/qr.dart';
 import 'package:nuvio/view/deposit/deposit.dart';
 import 'package:nuvio/view/intro/intro.dart';
 import 'package:nuvio/view/intro/intro_final.dart';
+import 'package:nuvio/view/passcode/change_passcode.dart';
+import 'package:nuvio/view/passcode/enter_passcode.dart';
 import 'package:nuvio/view/qr/my_qr.dart';
 import 'package:nuvio/view/plans/plans.dart';
 
@@ -44,10 +46,15 @@ class MyApp extends StatelessWidget {
         ),
 
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-        initialRoute: '/intro', //white surface background onBackground
+        initialRoute: '/enter_pass', //white surface background onBackground
         onGenerateRoute: (settings) {
           final args = settings.arguments;
           switch (settings.name) {
+            case '/enter_pass':
+              return MaterialPageRoute(
+                  builder: (context) => EnterPasscode("1234"));
+            case '/change_pass':
+              return MaterialPageRoute(builder: (context) => ChangePasscode());
             case '/withdraw':
               return MaterialPageRoute(builder: (context) => WithdrawView());
             case '/deposit':
