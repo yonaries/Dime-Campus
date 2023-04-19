@@ -5,8 +5,6 @@ MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\natan\.gradle\caches\
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\natan\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.camera:camera-camera2:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\3ce497cf7c7bdfa9fcd9274364fd387e\transformed\jetified-camera-camera2-1.2.2\AndroidManifest.xml:23:5-34:19
 MERGED from [androidx.camera:camera-camera2:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\3ce497cf7c7bdfa9fcd9274364fd387e\transformed\jetified-camera-camera2-1.2.2\AndroidManifest.xml:23:5-34:19
-MERGED from [androidx.camera:camera-core:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\89ee2c0127f69f7879d5c3bcd54ebc61\transformed\jetified-camera-core-1.2.2\AndroidManifest.xml:23:5-34:19
-MERGED from [androidx.camera:camera-core:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\89ee2c0127f69f7879d5c3bcd54ebc61\transformed\jetified-camera-core-1.2.2\AndroidManifest.xml:23:5-34:19
 MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.2.0] C:\Users\natan\.gradle\caches\transforms-3\7d56fa8a066b1f77f68e51b27db7da19\transformed\jetified-play-services-mlkit-barcode-scanning-18.2.0\AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.2.0] C:\Users\natan\.gradle\caches\transforms-3\7d56fa8a066b1f77f68e51b27db7da19\transformed\jetified-play-services-mlkit-barcode-scanning-18.2.0\AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.mlkit:vision-common:17.3.0] C:\Users\natan\.gradle\caches\transforms-3\24180f60c197c06bc3dc855bc6adcf16\transformed\jetified-vision-common-17.3.0\AndroidManifest.xml:8:5-16:19
@@ -19,6 +17,8 @@ MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\natan\.
 MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\natan\.gradle\caches\transforms-3\02334ee9d093afcbcec94917848728eb\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\natan\.gradle\caches\transforms-3\f46b9773282b7a3d38863a46e0e0b5d1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\natan\.gradle\caches\transforms-3\f46b9773282b7a3d38863a46e0e0b5d1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.camera:camera-core:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\89ee2c0127f69f7879d5c3bcd54ebc61\transformed\jetified-camera-core-1.2.2\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-core:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\89ee2c0127f69f7879d5c3bcd54ebc61\transformed\jetified-camera-core-1.2.2\AndroidManifest.xml:23:5-34:19
 MERGED from [androidx.core:core:1.6.0] C:\Users\natan\.gradle\caches\transforms-3\4ca28c4a71705f8a687c69dda140a277\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.6.0] C:\Users\natan\.gradle\caches\transforms-3\4ca28c4a71705f8a687c69dda140a277\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\natan\.gradle\caches\transforms-3\5abdc06e026f2f7b9b89c25dcd7a6d7e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
@@ -39,13 +39,13 @@ INJECTED from C:\projs\nuvio\android\app\src\main\AndroidManifest.xml:1:1-34:12
 INJECTED from C:\projs\nuvio\android\app\src\main\AndroidManifest.xml:1:1-34:12
 INJECTED from C:\projs\nuvio\android\app\src\main\AndroidManifest.xml:1:1-34:12
 MERGED from C:\projs\nuvio\android\app\src\main\AndroidManifest.xml:1:1-34:12
+MERGED from [:path_provider_android] C:\projs\nuvio\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:mobile_scanner] C:\projs\nuvio\build\mobile_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\natan\.gradle\caches\transforms-3\006d93cd422dbc43e89591147c2de572\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\natan\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
-MERGED from [com.google.mlkit:barcode-scanning:17.1.0] C:\Users\natan\.gradle\caches\transforms-3\614935f9f3b78eb78bb78a3fb91c2317\transformed\jetified-barcode-scanning-17.1.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.camera:camera-camera2:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\3ce497cf7c7bdfa9fcd9274364fd387e\transformed\jetified-camera-camera2-1.2.2\AndroidManifest.xml:17:1-36:12
 MERGED from [androidx.camera:camera-lifecycle:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\6f20912bb655be7b00de6e6dc1398949\transformed\jetified-camera-lifecycle-1.2.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.camera:camera-core:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\89ee2c0127f69f7879d5c3bcd54ebc61\transformed\jetified-camera-core-1.2.2\AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.mlkit:barcode-scanning:17.1.0] C:\Users\natan\.gradle\caches\transforms-3\614935f9f3b78eb78bb78a3fb91c2317\transformed\jetified-barcode-scanning-17.1.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.2.0] C:\Users\natan\.gradle\caches\transforms-3\7d56fa8a066b1f77f68e51b27db7da19\transformed\jetified-play-services-mlkit-barcode-scanning-18.2.0\AndroidManifest.xml:2:1-18:12
 MERGED from [com.google.mlkit:barcode-scanning-common:17.0.0] C:\Users\natan\.gradle\caches\transforms-3\18b4d4d33003712d484e852b793ebc67\transformed\jetified-barcode-scanning-common-17.0.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.mlkit:vision-common:17.3.0] C:\Users\natan\.gradle\caches\transforms-3\24180f60c197c06bc3dc855bc6adcf16\transformed\jetified-vision-common-17.3.0\AndroidManifest.xml:2:1-18:12
@@ -55,6 +55,7 @@ MERGED from [com.google.mlkit:vision-interfaces:16.2.0] C:\Users\natan\.gradle\c
 MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\natan\.gradle\caches\transforms-3\02334ee9d093afcbcec94917848728eb\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\natan\.gradle\caches\transforms-3\f46b9773282b7a3d38863a46e0e0b5d1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:16:1-26:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\natan\.gradle\caches\transforms-3\9354257804af8250f2ffb7c22e2892d5\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.camera:camera-core:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\89ee2c0127f69f7879d5c3bcd54ebc61\transformed\jetified-camera-core-1.2.2\AndroidManifest.xml:17:1-36:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\natan\.gradle\caches\transforms-3\f156363817d5f71529d60b6716392550\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\natan\.gradle\caches\transforms-3\cf24d35e50a727536c7357721dc007c5\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\natan\.gradle\caches\transforms-3\252fc848d5aa6e267df5e6907a023aed\transformed\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -97,20 +98,20 @@ uses-sdk
 INJECTED from C:\projs\nuvio\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\projs\nuvio\android\app\src\main\AndroidManifest.xml
 INJECTED from C:\projs\nuvio\android\app\src\main\AndroidManifest.xml
+MERGED from [:path_provider_android] C:\projs\nuvio\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] C:\projs\nuvio\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:mobile_scanner] C:\projs\nuvio\build\mobile_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:mobile_scanner] C:\projs\nuvio\build\mobile_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\natan\.gradle\caches\transforms-3\006d93cd422dbc43e89591147c2de572\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\natan\.gradle\caches\transforms-3\006d93cd422dbc43e89591147c2de572\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\natan\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\natan\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.mlkit:barcode-scanning:17.1.0] C:\Users\natan\.gradle\caches\transforms-3\614935f9f3b78eb78bb78a3fb91c2317\transformed\jetified-barcode-scanning-17.1.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.mlkit:barcode-scanning:17.1.0] C:\Users\natan\.gradle\caches\transforms-3\614935f9f3b78eb78bb78a3fb91c2317\transformed\jetified-barcode-scanning-17.1.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.camera:camera-camera2:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\3ce497cf7c7bdfa9fcd9274364fd387e\transformed\jetified-camera-camera2-1.2.2\AndroidManifest.xml:21:5-44
 MERGED from [androidx.camera:camera-camera2:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\3ce497cf7c7bdfa9fcd9274364fd387e\transformed\jetified-camera-camera2-1.2.2\AndroidManifest.xml:21:5-44
 MERGED from [androidx.camera:camera-lifecycle:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\6f20912bb655be7b00de6e6dc1398949\transformed\jetified-camera-lifecycle-1.2.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.camera:camera-lifecycle:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\6f20912bb655be7b00de6e6dc1398949\transformed\jetified-camera-lifecycle-1.2.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.camera:camera-core:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\89ee2c0127f69f7879d5c3bcd54ebc61\transformed\jetified-camera-core-1.2.2\AndroidManifest.xml:21:5-44
-MERGED from [androidx.camera:camera-core:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\89ee2c0127f69f7879d5c3bcd54ebc61\transformed\jetified-camera-core-1.2.2\AndroidManifest.xml:21:5-44
+MERGED from [com.google.mlkit:barcode-scanning:17.1.0] C:\Users\natan\.gradle\caches\transforms-3\614935f9f3b78eb78bb78a3fb91c2317\transformed\jetified-barcode-scanning-17.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:barcode-scanning:17.1.0] C:\Users\natan\.gradle\caches\transforms-3\614935f9f3b78eb78bb78a3fb91c2317\transformed\jetified-barcode-scanning-17.1.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.2.0] C:\Users\natan\.gradle\caches\transforms-3\7d56fa8a066b1f77f68e51b27db7da19\transformed\jetified-play-services-mlkit-barcode-scanning-18.2.0\AndroidManifest.xml:6:5-44
 MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.2.0] C:\Users\natan\.gradle\caches\transforms-3\7d56fa8a066b1f77f68e51b27db7da19\transformed\jetified-play-services-mlkit-barcode-scanning-18.2.0\AndroidManifest.xml:6:5-44
 MERGED from [com.google.mlkit:barcode-scanning-common:17.0.0] C:\Users\natan\.gradle\caches\transforms-3\18b4d4d33003712d484e852b793ebc67\transformed\jetified-barcode-scanning-common-17.0.0\AndroidManifest.xml:5:5-44
@@ -129,6 +130,8 @@ MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\nata
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\natan\.gradle\caches\transforms-3\f46b9773282b7a3d38863a46e0e0b5d1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\natan\.gradle\caches\transforms-3\9354257804af8250f2ffb7c22e2892d5\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\natan\.gradle\caches\transforms-3\9354257804af8250f2ffb7c22e2892d5\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.camera:camera-core:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\89ee2c0127f69f7879d5c3bcd54ebc61\transformed\jetified-camera-core-1.2.2\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-core:1.2.2] C:\Users\natan\.gradle\caches\transforms-3\89ee2c0127f69f7879d5c3bcd54ebc61\transformed\jetified-camera-core-1.2.2\AndroidManifest.xml:21:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\natan\.gradle\caches\transforms-3\f156363817d5f71529d60b6716392550\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\natan\.gradle\caches\transforms-3\f156363817d5f71529d60b6716392550\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\natan\.gradle\caches\transforms-3\cf24d35e50a727536c7357721dc007c5\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44

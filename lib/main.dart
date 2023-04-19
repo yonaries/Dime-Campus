@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+
 import 'package:nuvio/core/common/QrWidget.dart';
 import 'package:nuvio/view/Qr/qr.dart';
 import 'package:nuvio/view/intro/intro.dart';
 import 'package:nuvio/view/qr/my_qr.dart';
+import 'package:nuvio/view/plans/plans.dart';
+
+import 'package:google_fonts/google_fonts.dart';
 
 import 'core/common/home.dart';
 
@@ -19,22 +23,34 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Dime',
         theme: ThemeData(
+          textTheme: GoogleFonts.interTextTheme(
+            ThemeData.light().textTheme,
+          ),
           colorScheme: const ColorScheme.light(
-              primary: Color.fromRGBO(0, 230, 118, 1),
-              secondary: Color.fromRGBO(255, 224, 130, 1),
-              error: Colors.redAccent),
+            primary: Color.fromRGBO(0, 230, 118, 1),
+            secondary: Color.fromRGBO(255, 224, 130, 1),
+            error: Colors.redAccent,
+            background: Color(0xFF0b0d0f),
+            surface: Color(0xFF101213),
+            onSurface: Color(0xFFccd2e3),
+            onBackground: Color(0xFF6a6a6a),
+          ),
         ),
+
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-        initialRoute: '/my_qr', //white surface background onBackground
+        initialRoute: '/plans', //white surface background onBackground
         onGenerateRoute: (settings) {
           final args = settings.arguments;
           switch (settings.name) {
+            case '/':
             case '/home':
               return MaterialPageRoute(
                   builder: (context) => const MyHomePage(title: 'Dime App'));
             case '/scan':
               return MaterialPageRoute(builder: (context) => const QrView());
-
+            case '/plans':
+              return MaterialPageRoute(
+                  builder: (context) => const PlansScreen());
             case '/intro':
               return MaterialPageRoute(builder: (context) => const IntroView());
             case '/test':

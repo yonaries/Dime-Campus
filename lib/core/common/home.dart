@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../../view/activity/activity.dart';
+import '../../view/plans/plans.dart';
+import '../../view/wallet/wallet.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -10,9 +14,9 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   //TODO: Replace with actual screens
   final List<Widget> screens = [
-    const Center(child: Text('Wallet')),
-    const Center(child: Text('Activity')),
-    const Center(child: Text('Plan')),
+    const WalletScreen(),
+    const ActivityScreen(),
+    const PlansScreen(),
     const Center(child: Text('More')),
   ];
 
@@ -22,6 +26,9 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+    final ColorScheme colorScheme = theme.colorScheme;
+
     return Scaffold(
         body: PageStorage(
           bucket: bucket,
@@ -37,9 +44,10 @@ class _HomeState extends State<Home> {
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
-          color: const Color(0xFF101213),
+          surfaceTintColor: Theme.of(context).colorScheme.background,
           shape: const CircularNotchedRectangle(),
-          child: SizedBox(
+          child: Container(
+            color: colorScheme.surface,
             height: 60,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

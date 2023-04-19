@@ -16,3 +16,4 @@ com.example.nuvio.app-mergeDebugResources-14 C:\projs\nuvio\build\app\intermedia
 com.example.nuvio.app-mergeDebugResources-15 C:\projs\nuvio\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
 com.example.nuvio.app-merged_res-16 C:\projs\nuvio\build\app\intermediates\merged_res\debug
 com.example.nuvio.app-packaged_res-17 C:\projs\nuvio\build\mobile_scanner\intermediates\packaged_res\debug
+com.example.nuvio.app-packaged_res-18 C:\projs\nuvio\build\path_provider_android\intermediates\packaged_res\debug
