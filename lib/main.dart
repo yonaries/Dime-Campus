@@ -11,6 +11,7 @@ import 'package:nuvio/view/qr/my_qr.dart';
 import 'package:nuvio/view/plans/plans.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+
 import 'package:nuvio/view/rec/rec.dart';
 import 'package:nuvio/view/send/send.dart';
 import 'package:nuvio/view/withdrawal/with.dart';
@@ -20,6 +21,13 @@ import 'core/common/keypad.dart';
 
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
+
+import 'package:nuvio/view/plans/edit_plan.dart';
+
+import 'core/common/home.dart';
+import 'view/loan/loan_form.dart';
+import 'view/plans/plan_detail.dart';
+
 
 import 'dart:io';
 
@@ -54,8 +62,7 @@ class MyApp extends StatelessWidget {
             onBackground: Color(0xFF6a6a6a),
           ),
         ),
-
-        // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+        
         initialRoute:
             '/home', //_box.containsKey('password') ? '/enter_pass' : '/intro',
 
@@ -73,17 +80,10 @@ class MyApp extends StatelessWidget {
               return MaterialPageRoute(builder: (context) => DepositView());
             case '/rec':
               return MaterialPageRoute(builder: (context) => RecieveView());
-            case '/':
-            case '/home':
-              return MaterialPageRoute(
-                  builder: (context) => const MyHomePage(title: 'Dime App'));
             case '/scan':
               return MaterialPageRoute(builder: (context) => const QrView());
             case '/send':
               return MaterialPageRoute(builder: (context) => Send());
-            case '/plans':
-              return MaterialPageRoute(
-                  builder: (context) => const PlansScreen());
             case '/intro':
               return MaterialPageRoute(builder: (context) => const IntroView());
             case '/intro_f':
@@ -98,21 +98,19 @@ class MyApp extends StatelessWidget {
             default:
               return MaterialPageRoute(builder: (context) => QrView());
           }
-          // case '/my_qr': (context){
-
-          //   }
         }
-        // routes: {
-        //   '/home': (context) => const MyHomePage(title: 'Dime App'),
-        //   '/scan': (context) => const QrView(),
-        //   '/intro': (context) => IntroView(),
-        //   '/test': (context) => QrWidget("Ebenezer"),
-        //   '/my_qr': (context){
-        //        final args = context
-
-        //   };
-        // },
         );
+
+      ),
+      initialRoute: '/home',
+      routes: {
+        '/home': (context) => const MyHomePage(title: 'Dime App'),
+        '/plan_details': (context) => const PlanDetailScreen(),
+        '/create_plan': (context) => const EditPlanScreen(),
+        '/loan_form': (context) => const LoanFormScreen(),
+      },
+    );
+
   }
 }
 

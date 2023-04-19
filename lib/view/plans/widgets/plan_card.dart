@@ -30,62 +30,68 @@ class PlanCard extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsets.symmetric(
-        horizontal: 20,
+        horizontal: 10,
         vertical: 10,
       ),
-      child: Container(
-        width: width,
-        height: 100,
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        decoration: BoxDecoration(
-          color: colorScheme.surface,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  category,
-                  style: TextStyle(
-                    color: colorScheme.onSurface,
-                    fontSize: 14,
+      child: GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, '/plan_details');
+        },
+        child: Container(
+          width: width,
+          height: 100,
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          decoration: BoxDecoration(
+            color: colorScheme.surface,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    category,
+                    style: TextStyle(
+                      color: colorScheme.onSurface,
+                      fontSize: 14,
+                    ),
                   ),
-                ),
-                Text(
-                  title,
+                  const SizedBox(height: 5),
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+              LinearPercentIndicator(
+                width: (width - 135),
+                lineHeight: 8.0,
+                animation: true,
+                animationDuration: 1000,
+                leading: Text(
+                  current.toString(),
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
                   ),
                 ),
-              ],
-            ),
-            LinearPercentIndicator(
-              width: (width - 135),
-              lineHeight: 8.0,
-              animation: true,
-              animationDuration: 1000,
-              leading: Text(
-                current.toString(),
-                style: const TextStyle(
-                  color: Colors.white,
+                alignment: MainAxisAlignment.spaceBetween,
+                trailing: Text(
+                  budget.toString(),
+                  style: TextStyle(color: colorScheme.onSurface),
                 ),
+                percent: percent / 100,
+                barRadius: const Radius.circular(50),
+                progressColor: _color,
               ),
-              alignment: MainAxisAlignment.spaceBetween,
-              trailing: Text(
-                budget.toString(),
-                style: TextStyle(color: colorScheme.onSurface),
-              ),
-              percent: percent / 100,
-              barRadius: const Radius.circular(50),
-              progressColor: _color,
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
