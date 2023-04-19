@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
               error: Colors.redAccent),
         ),
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-        initialRoute: '/my_qr',
+        initialRoute: '/my_qr', //white surface background onBackground
         onGenerateRoute: (settings) {
           final args = settings.arguments;
           switch (settings.name) {
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
             case '/my_qr':
               return MaterialPageRoute(
                   builder: (context) =>
-                      MyQr("dsdsdsdsdsds", "dsdsd", "dsdsd", "dsdsd"));
+                      MyQr("Nablox", "8ye3943nyd83y83hrndoenfjn", "20"));
             default:
               return MaterialPageRoute(builder: (context) => QrView());
           }
