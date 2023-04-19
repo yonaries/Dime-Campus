@@ -27,6 +27,14 @@ class PlansScreen extends StatelessWidget {
           statusBarIconBrightness: Brightness.light,
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/create_plan');
+        },
+        tooltip: 'Create Plan',
+        backgroundColor: Theme.of(context).colorScheme.secondary,
+        child: const Icon(Icons.add),
+      ),
       backgroundColor: colorScheme.background,
       body: SizedBox(
         height: height,
