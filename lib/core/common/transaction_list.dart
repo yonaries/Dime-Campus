@@ -32,7 +32,7 @@ class TransactionList extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           SizedBox(
-            height: height * 0.5,
+            height: height * 0.65,
             child: ListView.builder(
               scrollDirection: Axis.vertical,
               itemCount: 15,

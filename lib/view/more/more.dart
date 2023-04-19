@@ -166,7 +166,9 @@ class _MoreScreenState extends State<MoreScreen> {
               ),
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/webhook');
+              },
               child: Container(
                 decoration: BoxDecoration(
                   border: Border(
@@ -182,38 +184,6 @@ class _MoreScreenState extends State<MoreScreen> {
                   children: const [
                     Text(
                       'Webhook',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      color: Colors.white,
-                      size: 16,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {},
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: colorScheme.onSurface.withOpacity(0.02),
-                      width: 1,
-                    ),
-                  ),
-                ),
-                height: 50,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      'Parental Guidance',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,

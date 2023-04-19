@@ -27,6 +27,7 @@ import 'package:nuvio/view/plans/edit_plan.dart';
 import 'core/common/home.dart';
 import 'view/loan/loan_form.dart';
 import 'view/plans/plan_detail.dart';
+import 'view/webhook/webhook.dart';
 
 
 import 'dart:io';
@@ -108,6 +109,7 @@ class MyApp extends StatelessWidget {
         '/plan_details': (context) => const PlanDetailScreen(),
         '/create_plan': (context) => const EditPlanScreen(),
         '/loan_form': (context) => const LoanFormScreen(),
+        '/webhook': (context) => const WebhookScreen(),
       },
     );
 
