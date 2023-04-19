@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
-class SmallPlanCard extends StatelessWidget {
-  const SmallPlanCard({
+class PlanCard extends StatelessWidget {
+  const PlanCard({
     super.key,
-    required this.colorScheme,
     required this.title,
     required this.category,
     required this.current,
     required this.budget,
   });
 
-  final ColorScheme colorScheme;
   final String title;
   final String category;
   final int current;
@@ -20,11 +18,24 @@ class SmallPlanCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double percent = (current / budget) * 100;
+    final double width = MediaQuery.of(context).size.width;
+    final ThemeData theme = Theme.of(context);
+    final ColorScheme colorScheme = theme.colorScheme;
+
+    final Color _color = percent > 40
+        ? percent > 70
+            ? colorScheme.primary
+            : colorScheme.secondary
+        : colorScheme.error;
 
     return Padding(
-      padding: const EdgeInsets.only(right: 10),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 20,
+        vertical: 10,
+      ),
       child: Container(
-        width: 210,
+        width: width,
+        height: 100,
         padding: const EdgeInsets.symmetric(horizontal: 20),
         decoration: BoxDecoration(
           color: colorScheme.surface,
@@ -55,7 +66,7 @@ class SmallPlanCard extends StatelessWidget {
               ],
             ),
             LinearPercentIndicator(
-              width: 120.0,
+              width: (width - 135),
               lineHeight: 8.0,
               animation: true,
               animationDuration: 1000,
@@ -72,7 +83,7 @@ class SmallPlanCard extends StatelessWidget {
               ),
               percent: percent / 100,
               barRadius: const Radius.circular(50),
-              progressColor: colorScheme.primary,
+              progressColor: _color,
             ),
           ],
         ),

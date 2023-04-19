@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'core/common/home.dart';
 
@@ -15,6 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Dime',
       theme: ThemeData(
+        textTheme: GoogleFonts.interTextTheme(
+          ThemeData.light().textTheme,
+        ),
         colorScheme: const ColorScheme.light(
           primary: Color.fromRGBO(0, 230, 118, 1),
           secondary: Color.fromRGBO(255, 224, 130, 1),

@@ -2,7 +2,7 @@
 
 Financial service designed to help students save more money, reduce stress, and stay on top of their finances while studying on campus.
 
-Nuvio enable students to
+Dime enable students to
 
 - manage their money easily
 - track their expenses
