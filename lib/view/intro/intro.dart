@@ -138,7 +138,8 @@ class _IntroViewState extends State<IntroView> {
                           Navigator.of(context).pushNamed('/intro_f');
                         })
                       ])),
-                  Expanded(flex: 2, child: TabPageSelector(color: Colors.white))
+                  const Expanded(
+                      flex: 2, child: TabPageSelector(color: Colors.white))
                 ],
               ),
             );

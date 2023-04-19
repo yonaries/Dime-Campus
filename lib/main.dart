@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
 
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
         initialRoute:
-            _box.containsKey('password') ? '/enter_pass' : '/change_pass',
+            '/home', //_box.containsKey('password') ? '/enter_pass' : '/intro',
 
         //white surface background onBackground
         onGenerateRoute: (settings) {
