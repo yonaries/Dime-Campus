@@ -30,7 +30,7 @@ class _WalletScreenState extends State<WalletScreen> {
           statusBarIconBrightness: Brightness.light,
         ),
       ),
-      body: SizedBox(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             // upper container
@@ -134,22 +134,27 @@ class _WalletScreenState extends State<WalletScreen> {
                               ),
                             ),
                             const Spacer(),
-                            Row(
-                              children: const [
-                                Text(
-                                  'View all',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16,
+                            GestureDetector(
+                              onTap: () {
+                                //TODO: navigate to plans screen by changing the index of the bottom navigation bar
+                              },
+                              child: Row(
+                                children: const [
+                                  Text(
+                                    'View all',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                    ),
                                   ),
-                                ),
-                                SizedBox(width: 5),
-                                Icon(
-                                  Icons.arrow_forward_ios,
-                                  color: Colors.white,
-                                  size: 16,
-                                ),
-                              ],
+                                  SizedBox(width: 5),
+                                  Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: Colors.white,
+                                    size: 16,
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         ),
@@ -181,6 +186,7 @@ class _WalletScreenState extends State<WalletScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: SizedBox(
+                height: height * 0.48,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -196,29 +202,32 @@ class _WalletScreenState extends State<WalletScreen> {
                           ),
                         ),
                         const Spacer(),
-                        Row(
-                          children: const [
-                            Text(
-                              'View all',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
+                        GestureDetector(
+                          onTap: () {
+                            //TODO: navigate to activity screen by changing the index of the bottom navigation bar
+                          },
+                          child: Row(
+                            children: const [
+                              Text(
+                                'View all',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                ),
                               ),
-                            ),
-                            SizedBox(width: 5),
-                            Icon(
-                              Icons.arrow_forward_ios,
-                              color: Colors.white,
-                              size: 16,
-                            ),
-                          ],
+                              SizedBox(width: 5),
+                              Icon(
+                                Icons.arrow_forward_ios,
+                                color: Colors.white,
+                                size: 16,
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
                     const SizedBox(height: 10),
-                    SizedBox(
-                      height: 100,
-
+                    Expanded(
                       //TODO: make the list scrollable till to the top of lower container
                       child: ListView.builder(
                         scrollDirection: Axis.vertical,

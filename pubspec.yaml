@@ -38,6 +38,7 @@ dependencies:
   percent_indicator: ^4.2.3
   google_fonts: ^4.0.3
   syncfusion_flutter_charts: ^21.1.41
+  image_picker: ^0.8.7+3
 
 dev_dependencies:
   flutter_test:
