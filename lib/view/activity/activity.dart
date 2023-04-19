@@ -20,7 +20,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Activity'),
-        backgroundColor: colorScheme.background,
+        backgroundColor: colorScheme.surface,
         elevation: 0,
         centerTitle: true,
         titleTextStyle: const TextStyle(
@@ -28,7 +28,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
           fontWeight: FontWeight.w600,
         ),
         systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarColor: colorScheme.background,
+          statusBarColor: colorScheme.surface,
           statusBarIconBrightness: Brightness.light,
         ),
         actions: [
