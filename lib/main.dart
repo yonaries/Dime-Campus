@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:nuvio/core/common/QrWidget.dart';
-import 'package:nuvio/view/Qr/qr.dart';
+import 'package:nuvio/view/qr/qr.dart';
 import 'package:nuvio/view/deposit/deposit.dart';
 import 'package:nuvio/view/intro/intro.dart';
 import 'package:nuvio/view/intro/intro_final.dart';
@@ -25,10 +25,11 @@ import 'package:path_provider/path_provider.dart';
 import 'package:nuvio/view/plans/edit_plan.dart';
 
 import 'core/common/home.dart';
+import 'view/backup/backup.dart';
 import 'view/loan/loan_form.dart';
 import 'view/plans/plan_detail.dart';
+import 'view/vote/votes.dart';
 import 'view/webhook/webhook.dart';
-
 
 import 'dart:io';
 
@@ -63,9 +64,16 @@ class MyApp extends StatelessWidget {
             onBackground: Color(0xFF6a6a6a),
           ),
         ),
-        
-        initialRoute:
-            '/home', //_box.containsKey('password') ? '/enter_pass' : '/intro',
+        initialRoute: '/home',
+        routes: {
+          '/home': (context) => const MyHomePage(title: 'Dime App'),
+          '/plan_details': (context) => const PlanDetailScreen(),
+          '/create_plan': (context) => const EditPlanScreen(),
+          '/loan_form': (context) => const LoanFormScreen(),
+          '/webhook': (context) => const WebhookScreen(),
+          'backup': (context) => const BackupScreen(),
+          'vote': (context) => const VoteScreen(),
+        }, //_box.containsKey('password') ? '/enter_pass' : '/intro',
 
         //white surface background onBackground
         onGenerateRoute: (settings) {
@@ -99,20 +107,7 @@ class MyApp extends StatelessWidget {
             default:
               return MaterialPageRoute(builder: (context) => QrView());
           }
-        }
-        );
-
-      ),
-      initialRoute: '/home',
-      routes: {
-        '/home': (context) => const MyHomePage(title: 'Dime App'),
-        '/plan_details': (context) => const PlanDetailScreen(),
-        '/create_plan': (context) => const EditPlanScreen(),
-        '/loan_form': (context) => const LoanFormScreen(),
-        '/webhook': (context) => const WebhookScreen(),
-      },
-    );
-
+        });
   }
 }
 
